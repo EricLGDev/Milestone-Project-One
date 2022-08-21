@@ -10,43 +10,43 @@
     <!-- game container -->
     <div class="wrapper">
         <div class="game">
-          <h1 id="title">
+            <h1 id="title">
             
-          </h1>
+            </h1>
   
-          <div class="main">
-            <div class="rules">
-              <button id="mute">
+            <div class="main">
+                <div class="rules">
+                    <button id="mute">
                 <!-- may use a favicon here -->
-                <img id="volumeImg" src="" /> 
-              </button>
+                        <img id="volumeImg" src="" /> 
+                    </button>
               <!-- we'll use "gems" for the in-game object -->
-              <p>Click and drag a gem to swap.</p>
-              <br />
-              <p>
-                Swap 2 gems sitting side-by-side to create 3, 4, or 5 gems in a
-                row of the same color.
-              </p>
-              <br />
-              <p>Every move has to make a match.</p>
-              <br />
-              <p>When you run out of moves, the game is over.</p>
+                        <p>Click and drag a gem to swap.</p>
+                        <br />
+                        <p>
+                            Swap 2 gems sitting side-by-side to create 3, 4, or 5 gems in a
+                            row of the same color.
+                        </p>
+                        <br />
+                        <p>Every move has to make a match.</p>
+                        <br />
+                        <p>When you run out of moves, the game is over.</p>
               
               <!-- common menu buttons -->
-              <div class="buttons">
-                <button id="startBtn" onclick="setJS('basicGame.js')">
-                  START
-                </button>
-                <button id="timeBtn" onclick="setJS('timeTrial.js')">
-                  TIME TRIAL
-                </button>
-                <button id="resetBtn" onclick="resetbtn()" style="display: none">
-                  Reset
-                </button>
-              </div>
-            </div>
-            <!-- html canvas -->
-            <canvas id="ptbreak" width="600" height="700"> </canvas>
-          </div>
+                        <div class="buttons">
+                            <button id="startBtn" onclick="setJS('basicGame.js')">
+                            START
+                            </button>
+                            <button id="timeBtn" onclick="setJS('timeTrial.js')">
+                            TIME TRIAL
+                            </button>
+                            <button id="resetBtn" onclick="resetbtn()" style="display: none">
+                            Reset
+                            </button>
+                        </div>
+        </div>
+                    <!-- html canvas -->
+        <canvas id="ptbreak" width="600" height="700"> </canvas>
+    </div>
 </body>
 </html>
