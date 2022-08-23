@@ -46,3 +46,24 @@ function Gem(x, y) {
         }
     }
 }
+
+//boolean flag checks
+function checkColor(x, y, c) {
+    var flag = true;
+    if (x > 1) {
+        var c0 = gems[x - 2][y].color;
+        var c1 = gems[x - 1][y].color;
+        if (c0 === c1 && c1 === c) {
+            flag = false;
+        }
+    }
+    if (y > 1) {
+        var c0 = gems[x][y - 2].color;
+        var c1 = gems[x][y - 1].color;
+        if (c0 === c1 && c1 === c) {
+            flag = false;
+        }
+    }
+
+    return flag;
+}
