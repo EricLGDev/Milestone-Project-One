@@ -67,3 +67,66 @@ function checkColor(x, y, c) {
 
     return flag;
 }
+
+function setRemoveFlag() {
+    for (let x = 0; x < 10; x++) {
+        var c0 = gems[x][0].color;
+        var count = 1;
+
+        for (var y = 1; y < 10; y++) {
+            var c1 = gems[x][y].color;
+            if (c0 === c1) {
+                count++;
+                if (count >= 3) {
+                    gems[x][y - 2].remove = true;
+                    gems[x][y - 1].remove = true;
+                    gems[x][y].remove = true;
+                } 
+            } else {
+                c0 = c1;
+                count = 1;
+            }
+        }
+    }
+
+    for (let y = 0; y < 10; y++) {
+        var c0 = gems[0][y].color;
+        var count = 1;
+
+        for (var x = 1; x < 10; x++) {
+            var c1 = gems[x][y].color;
+            if (c0 === c1) {
+                count++;
+                if (count >= 3) {
+                    gems[x - 2][y].remove = true;
+                    gems[x - 1][y].remove = true;
+                    gems[x][y].remove = true;
+                } 
+            } else {
+                c0 = c1;
+                count = 1;
+            }
+        }
+    }
+}
+
+//gem fall
+function fall() {
+    for (var x = 0; x < 10; x++) {
+        for (var y = 9, z = 9; y >= 0; y-- , z--) {
+            while (z >= 0) {
+                if (gems[x][z].remove) {
+                    z--;
+                } else {
+                    break;
+                }
+            }
+
+            if (y !== z) {
+                var colorNum = (z >= 0) ? gems[x][z].color : getRandomNum(7);
+                gems[x][y].moveGem(x, z, colorNum);
+            }
+        }
+    }
+    //score update should go here
+}
