@@ -130,3 +130,20 @@ function fall() {
     }
     //score update should go here probably
 }
+
+//fun discovery with js, this should fetch the other js files once game start is initialized
+function setJS(filename) {
+    let elm = document.createElement('script');
+    elm.type = 'text/javascript';
+    elm.src = "./assets/" + filename;
+    document.body.appendChild(elm);
+
+    //remove buttons and initialize game
+    setTimeout(function () {
+        startBtn.style.display = 'none';
+        timeBtn.style.display = 'none';
+        resetBtn.style.display = 'inline';
+        c.clearRect(0, 0, 600, 700)
+        initialize();
+    }, 200)
+}
