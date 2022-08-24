@@ -1,6 +1,6 @@
 var canvas = document.getElementById("ptbreak"),
     c = canvas.getContext("2d"),
-    gems = [],
+    gems = [jackFrost, pyroJack, pixie],
     moves = []
 let gemList = [];
 //menu buttons
