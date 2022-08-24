@@ -14,6 +14,11 @@ let moveCount = 0;
 let timeCount = 0;
 let score = 0;
 let timer;
+let personaBG = document.getElementById('persona')
+
+function setBackgroundImg() {
+    c.drawImage(personaBG, 0, 0, 600, 700);
+}
 
 function getRandomNum(n) {
     return Math.floor(Math.random() * n);

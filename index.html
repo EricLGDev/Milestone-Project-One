@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Phantom Thief Break</title>
 </head>
-<body>
+<body onload="setBackgroundImg()">
     <!-- game container -->
     <div class="wrapper">
         <div class="game">
@@ -48,6 +48,9 @@
                     <!-- html canvas -->
         <canvas id="ptbreak" width="600" height="700"> </canvas>
     </div>
+
+    <!-- I can set my images here -->
+    <img id="persona" src="./assets/img/personaBG.jpg" alt="" style="display: none;">
 
     <script src="./assets/base.js" type="text/javascript"></script>
 </body>
