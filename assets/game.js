@@ -25,6 +25,9 @@ function initialize() {
         }
     }
 
+    canvas.onmousedown = myMouseDown;
+    canvas.onmouseup = myMouseUp;
+
     timer = setInterval(checkGemStatus, 10);
 
     draw();
@@ -66,7 +69,7 @@ function draw() {
         }
     }
 
-    c.font = 'bold 20px sans-serif';
+    c.font = 'bold 30px noto-sans';
     c.textAlign = 'center';
     c.fillText("Moves Left : " + moveCount, 150, 50);
     c.fillText("Score: " + score, 400, 50);
@@ -98,8 +101,6 @@ function checkGemStatus() {
     if (moves.length === 0 && moveCount === 0) {
         clearInterval(timer);
         timer = null;
-        bgm.pause();
-        bgm.currentTime = 0;
         setTimeout('gameOver()', 500);
     }
 }

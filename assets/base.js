@@ -163,3 +163,45 @@ function resetbtn() {
     clearInterval(timer);
     timer = null;
 }
+
+//need mouse functionality
+function myMouseDown(e) {
+    mouseDownX = e.offsetX;
+    mouseDownY = e.offsetY
+}
+
+function myMouseUp(e) {
+    var gemX1 = Math.floor(mouseDownX / 60);
+    var gemY1 = Math.floor((mouseDownY - 100) / 60);
+
+    var gemX2 = gemX1;
+    var gemY2 = gemY1;
+    var mouseUpX = e.offsetX;
+    var mouseUpY = e.offsetY;
+
+    if (Math.abs(mouseUpX - mouseDownX) === 0 && Math.abs(mouseUpY - mouseDownY) === 0) {
+        return;
+    } else if (Math.abs(mouseUpX - mouseDownX) > Math.abs(mouseUpY - mouseDownY)) {
+        gemX2 += (mouseUpX - mouseDownX > 0) ? 1 : -1;
+    } else {
+        gemY2 += (mouseUpY - mouseDownY > 0) ? 1 : -1;
+    }
+
+    if (gems[gemX1][gemY1].moving || gems[gemX2][gemY2].moving || timer === null) {
+        return;
+    }
+
+    // Swtich Colors
+    var gemColor1 = gems[gemX1][gemY1].color;
+    var gemColor2 = gems[gemX2][gemY2].color;
+    if (gemColor1 === gemColor2) {
+        badSound.play();
+    } else {
+        gems[gemX1][gemY1].moveGem(gemX2, gemY2, gemColor2);
+        gems[gemX2][gemY2].moveGem(gemX1, gemY1, gemColor1);
+    }
+
+    moveCount--;
+    draw();
+
+}
