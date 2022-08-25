@@ -2,7 +2,7 @@ var canvas = document.getElementById("ptbreak"),
     c = canvas.getContext("2d"),
     gems = [],
     moves = []
-let gemList = [jackFrost, pyroJack, pixie];
+let gemList = [jackFrost, pyroJack, pixie, morgana, necronomicon, arsene, jokerMask];
 //menu buttons
 let startBtn = document.getElementById("startBtn");
 let timeBtn = document.getElementById('timeBtn');

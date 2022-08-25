@@ -55,3 +55,51 @@ function draw() {
 //set a way to clear gems once matched
 
 //game over requirement
+function draw() {
+
+    // Clear the canvas
+    c.clearRect(0, 0, 600, 700);
+
+    for (let x = 0; x < 10; x++) {
+        for (let y = 0; y < 10; y++) {
+            c.drawImage(gemList[gems[x][y].color], x * 60, gems[x][y].getY(), 50, 50);
+        }
+    }
+
+    c.font = 'bold 20px sans-serif';
+    c.textAlign = 'center';
+    c.fillText("Moves Left : " + moveCount, 150, 50);
+    c.fillText("Score: " + score, 400, 50);
+
+}
+
+
+function checkGemStatus() {
+    if (moves.length > 0) {
+        for (var i = 0; i < moves.length; i++) {
+            moves[i].update();
+        }
+
+        moves = moves.filter(
+            function (gem) {
+                return gem.gapCount !== 0;
+            }
+
+        )
+
+        if (moves.length === 0) {
+            setRemoveFlag();
+            fall();
+        }
+    }
+
+    draw();
+
+    if (moves.length === 0 && moveCount === 0) {
+        clearInterval(timer);
+        timer = null;
+        bgm.pause();
+        bgm.currentTime = 0;
+        setTimeout('gameOver()', 500);
+    }
+}
