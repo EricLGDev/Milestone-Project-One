@@ -152,3 +152,14 @@ function setJS(filename) {
         initialize();
     }, 200)
 }
+
+function resetbtn() {
+    c.clearRect(0, 0, 600, 700);
+    setBackgroundImg();
+    startBtn.style.display = 'inline';
+    timeBtn.style.display = 'inline';
+    resetBtn.style.display = 'none';
+
+    clearInterval(timer);
+    timer = null;
+}
