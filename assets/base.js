@@ -133,6 +133,7 @@ function fall() {
             }
         }
     }
+    //score update should go here probably
     let removeFlag = true
     for (var x = 0; x < 10; x++) {
         for (var y = 0; y < 10; y++) {
@@ -141,7 +142,7 @@ function fall() {
                 score += 100;
             }
         }
-    }//score update should go here probably
+    }
 }
 
 //fun discovery with js, this should fetch the other js files once game start is initialized
@@ -212,4 +213,14 @@ function myMouseUp(e) {
     moveCount--;
     draw();
 
+}
+
+function gameOver() {
+    c.clearRect(0, 0, 600, 700);
+    startBtn.style.display = "inline";
+    timeBtn.style.display = "inline";
+    resetBtn.style.display = 'none';
+    c.font = 'bold 40px noto-sans';
+    c.fillText('Game Over', 300, 150);
+    c.fillText('Score: ' + score, 300, 250);
 }
