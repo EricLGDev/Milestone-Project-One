@@ -30,6 +30,7 @@ function initialize() {
 
     timer = setInterval(checkGemStatus, 10);
 
+    setBackgroundImg()
     draw();
 }
 
@@ -58,23 +59,6 @@ function draw() {
 //set a way to clear gems once matched
 
 //game over requirement
-function draw() {
-
-    // Clear the canvas
-    c.clearRect(0, 0, 600, 700);
-
-    for (let x = 0; x < 10; x++) {
-        for (let y = 0; y < 10; y++) {
-            c.drawImage(gemList[gems[x][y].color], x * 60, gems[x][y].getY(), 50, 50);
-        }
-    }
-
-    c.font = 'bold 30px noto-sans';
-    c.textAlign = 'center';
-    c.fillText("Moves Left : " + moveCount, 150, 50);
-    c.fillText("Score: " + score, 400, 50);
-
-}
 
 
 function checkGemStatus() {
