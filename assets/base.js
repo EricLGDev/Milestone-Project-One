@@ -17,7 +17,7 @@ let timer;
 let personaBG = document.getElementById('persona')
 
 function setBackgroundImg() {
-    c.drawImage(personaBG, 0, 0, 600, 700);
+    c.drawImage(personaBG, 0, 0, 600, 800);
 }
 
 function getRandomNum(n) {
@@ -157,13 +157,13 @@ function setJS(filename) {
         startBtn.style.display = 'none';
         timeBtn.style.display = 'none';
         resetBtn.style.display = 'inline';
-        c.clearRect(0, 0, 600, 700)
+        c.clearRect(0, 0, 600, 800)
         initialize();
     }, 200)
 }
 
 function resetbtn() {
-    c.clearRect(0, 0, 600, 700);
+    c.clearRect(0, 0, 600, 800);
     setBackgroundImg();
     startBtn.style.display = 'inline';
     timeBtn.style.display = 'inline';
