@@ -228,4 +228,5 @@ function gameOver() {
     c.fillText('Game Over', 300, 150);
     c.fillText('Score: ' + score, 300, 250);
     gom.play();
+    gom.volume = 0.2;
 }

@@ -31,6 +31,7 @@ function initialize() {
     timer = setInterval(checkGemStatus, 10);
 
     bgm.play();
+    bgm.volume = 0.2;
     gom.pause();
     gom.currentTime = 0;
     
