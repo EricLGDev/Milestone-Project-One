@@ -30,14 +30,13 @@ function initialize() {
 
     timer = setInterval(checkGemStatus, 10);
 
-    setBackgroundImg()
     draw();
 }
 
 function draw() {
 
     // Clear the canvas
-    c.clearRect(0, 0, 600, 700);
+    c.clearRect(0, 0, 600, 800);
 
     for (let x = 0; x < 10; x++) {
         for (let y = 0; y < 10; y++) {

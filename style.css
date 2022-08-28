@@ -12,9 +12,41 @@ body {
 }
 
 .wrapper {
-    padding-left: 50vh;
+    padding-left: 50vh;    
 }
 
-#persona {
-    background: url("assets/img/personaPhone2.png")
+button {
+    background-color: red;
+    border-radius: 30%;
+}
+
+#startBtn {
+    position: fixed;
+    display: flex;
+    margin-top: 35vh;
+    margin-left: 29vh;
+    font-size: large;
+    box-shadow: 20px solid black;
+}
+
+#timeBtn {
+    position: fixed;
+    display: flex;
+    margin-top: 45vh;
+    margin-left: 27vh;
+    font-size: large;
+    box-shadow: 20px solid black;
+}
+
+#resetBtn {
+    position: fixed;
+    margin-top: 75vh;
+    margin-left: 28vh;
+    font-size: larger;
+}
+
+canvas {
+    background-color: rgba(125, 111, 111, 0.816);
+    border: 10px solid rgb(0, 0, 0);
+    border-radius: 15%;
 }
