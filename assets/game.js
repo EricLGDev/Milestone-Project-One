@@ -30,6 +30,11 @@ function initialize() {
 
     timer = setInterval(checkGemStatus, 10);
 
+    bgm.play();
+    gom.pause();
+    gom.currentTime = 0;
+    
+
     draw();
 }
 
@@ -85,5 +90,7 @@ function checkGemStatus() {
         clearInterval(timer);
         timer = null;
         setTimeout('gameOver()', 500);
+        bgm.pause();
+        bgm.currentTime = 0;
     }
 }

@@ -40,7 +40,7 @@ button {
 
 #resetBtn {
     position: fixed;
-    margin-top: 75vh;
+    margin-top: 80vh;
     margin-left: 28vh;
     font-size: larger;
 }
@@ -49,4 +49,9 @@ canvas {
     background-color: rgba(125, 111, 111, 0.816);
     border: 10px solid rgb(0, 0, 0);
     border-radius: 15%;
+    margin-top: 5vh;
+}
+
+.rules {
+    text-align: lef;
 }

@@ -14,7 +14,9 @@ let moveCount = 0;
 let timeCount = 0;
 let score = 0;
 let timer;
-let personaBG = document.getElementById('persona')
+let personaBG = document.getElementById('persona');
+let bgm = document.getElementById('bgm')
+let gom = document.getElementById('gameOverMusic')
 
 function setBackgroundImg() {
     c.drawImage(personaBG, 0, 0, 600, 800);
@@ -171,6 +173,8 @@ function resetbtn() {
 
     clearInterval(timer);
     timer = null;
+    bgm.pause();
+    bgm.currentTime = 0;
 }
 
 //need mouse functionality
@@ -223,4 +227,5 @@ function gameOver() {
     c.font = 'bold 40px noto-sans';
     c.fillText('Game Over', 300, 150);
     c.fillText('Score: ' + score, 300, 250);
+    gom.play();
 }

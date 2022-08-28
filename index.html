@@ -8,6 +8,25 @@
     <title>Phantom Thief Break</title>
 </head>
 <body onload="setBackgroundImg()">
+    <!-- <div class="rules"> -->
+        <!-- <button id="mute"> -->
+    <!-- may use a favicon here -->
+            <!-- <img id="volumeImg" src="" /> 
+        </button> -->
+    <!-- we'll use "gems" for the in-game object -->
+            <!-- <p>Click and drag a gem to swap.</p>
+            <br />
+            <p>
+                Swap 2 gems sitting side-by-side to create 3, 4, or 5 gems in a
+                row of the same color.
+            </p>
+            <br />
+            <p>Every move has to make a match.</p>
+            <br />
+            <p>When you run out of moves, the game is over.</p>
+    </div> -->
+
+
     <!-- game container -->
     <div class="wrapper">
         <div class="game">
@@ -16,22 +35,7 @@
             </h1>
   
             <div class="main">
-                <div class="rules">
-                    <!-- <button id="mute"> -->
-                <!-- may use a favicon here -->
-                        <!-- <img id="volumeImg" src="" /> 
-                    </button> -->
-              <!-- we'll use "gems" for the in-game object -->
-                        <!-- <p>Click and drag a gem to swap.</p>
-                        <br />
-                        <p>
-                            Swap 2 gems sitting side-by-side to create 3, 4, or 5 gems in a
-                            row of the same color.
-                        </p>
-                        <br />
-                        <p>Every move has to make a match.</p>
-                        <br />
-                        <p>When you run out of moves, the game is over.</p> -->
+
               
               <!-- common menu buttons -->
                         <div class="buttons">
@@ -45,6 +49,7 @@
                             Reset
                             </button>
                         </div>
+            </div>            
         </div>
                     <!-- html canvas -->
         <canvas id="ptbreak" width="600" height="800"></canvas>
@@ -60,6 +65,11 @@
     <img id="necronomicon" src="./assets/img/necronomicon.png" alt="" style="display: none;">
     <img id="arsene" src="./assets/img/arsene.png" alt="" style="display: none;">
     <img id="jokerMask" src="./assets/img/jokerMask.png" alt="" style="display: none;">
+
+    <!-- audio -->
+    <audio src="./assets/audio/1-24. Life Will Change -instrumental version-.mp3" id="bgm"></audio>
+    <audio src="./assets/audio/1-19. Victory.mp3" id="gameOverMusic"></audio>
+
     <script src="./assets/base.js" type="text/javascript"></script>
 </body>
 </html>
