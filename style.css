@@ -53,5 +53,18 @@ canvas {
 }
 
 .rules {
-    text-align: lef;
+    position: absolute;
+    display: flex;
+    align-content: flex-start;
+    flex-flow: column wrap;
+    height: 400px;
+    background-color: black;
+    border: 2px solid white;
+}
+
+p {
+    text-align: center;
+    width: 100px;
+    font-family: 'Lucida Sans';
+    color: brown;
 }
