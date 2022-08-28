@@ -58,8 +58,10 @@ canvas {
     align-content: flex-start;
     flex-flow: column wrap;
     height: 400px;
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0.775);
     border: 2px solid white;
+    margin-left: 20vh;
+    margin-top: 20vh;
 }
 
 p {
