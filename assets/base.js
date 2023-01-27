@@ -135,7 +135,7 @@ function fall() {
             }
         }
     }
-    //score update should go here probably
+    // score update should go here probably
     let removeFlag = true
     for (var x = 0; x < 10; x++) {
         for (var y = 0; y < 10; y++) {
